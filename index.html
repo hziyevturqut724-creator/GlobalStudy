@@ -1,1 +1,94 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>GlobalStudy AI Mentor</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n        }\n        #chat-widget {\n            position: fixed;\n            bottom: 20px;\n            right: 20px;\n            width: 300px;\n            background: white;\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);\n            border-radius: 10px;\n            overflow: hidden;\n            z-index: 1000;\n            display: flex;\n            flex-direction: column;\n            animation: pulse 2s infinite;\n        }\n        @keyframes pulse {\n            0% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }\n            50% { box-shadow: 0 0 20px rgba(0, 255, 0, 1); }\n            100% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }\n        }\n        .chat-header {\n            background: #4CAF50;\n            color: white;\n            padding: 10px;\n            text-align: center;\n        }\n        .chat-body {\n            padding: 10px;\n            flex: 1;\n            display: flex;\n            flex-direction: column;\n        }\n        .chat-input {\n            margin-top: 10px;\n            display: flex;\n        }\n        .chat-input input {\n            flex: 1;\n            padding: 10px;\n            border-radius: 5px;\n            border: 1px solid #ccc;\n        }\n        .chat-input button {\n            padding: 10px;\n            border: none;\n            background: #4CAF50;\n            color: white;\n            border-radius: 5px;\n            margin-left: 5px;\n        }\n    </style>\n</head>\n<body>\n    <div id="chat-widget">\n        <div class="chat-header"><i class="fas fa-brain"></i> GlobalStudy AI Mentor</div>\n        <div class="chat-body">\n            <div id="chat-messages"></div>\n            <div class="chat-input">\n                <input type="text" aria-label="Type your message here" placeholder="Type your message..." />\n                <button aria-label="Send message">Send</button>\n            </div>\n        </div>\n    </div>\n    <script src="https://kit.fontawesome.com/a076d05399.js"></script>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Study</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #bd68ff;
+        }
+        .button {
+            background-color: #bd68ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #9d50d8;
+        }
+        .ai-mentor {
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Global Study</h1>
+    <div class="container">
+        <div class="card">
+            <h2>For Educators</h2>
+            <p>Explore resources and tools tailored for educators.</p>
+            <button class="button" onclick="openEducatorPortal()">Go to Educator Portal</button>
+        </div>
+        <div class="card">
+            <h2>For Students</h2>
+            <p>Discover learning materials and opportunities.</p>
+            <button class="button" onclick="openStudentPortal()">Go to Student Portal</button>
+        </div>
+    </div>
+    <div class="ai-mentor">
+        <h2>AI Mentor</h2>
+        <p>Your personal learning assistant.</p>
+        <button class="button" onclick="activateAI()">Chat with AI</button>
+        <button class="button" onclick="quickActions()">Quick Actions</button>
+        <button class="button" onclick="voiceActivate()">Voice Activation</button>
+    </div>
+    <script>
+        function openEducatorPortal() {
+            window.location.href = 'educator-portal.html';
+        }
+        function openStudentPortal() {
+            window.location.href = 'student-portal.html';
+        }
+        function activateAI() {
+            // Code to activate AI chat functionality
+            alert('AI Mentor activated for chat!');
+        }
+        function quickActions() {
+            // Code for quick actions
+            alert('Quick actions are ready!');
+        }
+        function voiceActivate() {
+            // Code to initiate voice activation
+            alert('Voice activation enabled!');
+        }
+    </script>
+</body>
+</html>
