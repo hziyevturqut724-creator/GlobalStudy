@@ -3,51 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Study</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Global Study - Dual Portal</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #9b59b6; /* breathtaking purple */
-            color: #ffffff; /* white text for high contrast */
+            background: #1a1a2e;
+            color: #eaeaea;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
+        .portal {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
             padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
         }
-        button {
-            background-color: #3498db;
-            color: white;
+        .portal h2 {
+            color: #da77f2;
+        }
+        .portal a {
+            display: inline-block;
+            margin-top: 15px;
             padding: 10px 20px;
-            border: none;
+            color: white;
+            background-color: #bd60ff;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
-        button:hover {
-            background-color: #2980b9;
+        .portal a:hover {
+            background-color: #a348c4;
         }
     </style>
 </head>
 <body>
-    <div class="container" role="main">
-        <header>
-            <h1>Global Study</h1>
-            <p id="mission-statement" aria-label="Accessibility First mission statement">Our mission is to make education accessible and inclusive for all students and teachers.</p>
-        </header>
-        <main>
-            <section>
-                <h2>Features</h2>
-                <ul>
-                    <li aria-label="Voice-to-Text for students">Voice-to-Text for students</li>
-                    <li aria-label="AI-assisted lesson planning for teachers">AI-assisted lesson planning for teachers</li>
-                    <li aria-label="Screen Reader Friendly UI">Screen Reader Friendly UI</li>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <button aria-label="Start your inclusive journey">Start Your Inclusive Journey</button>
-        </footer>
+    <div class="portal">
+        <h2>Educators Portal</h2>
+        <p>Access resources and tools for teaching.</p>
+        <a href="#">Enter</a>
+    </div>
+    <div class="portal">
+        <h2>Students Portal</h2>
+        <p>Explore materials and get support.</p>
+        <a href="#">Enter</a>
     </div>
 </body>
 </html>
