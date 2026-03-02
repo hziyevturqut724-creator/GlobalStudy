@@ -6,55 +6,48 @@
     <title>Global Study</title>
     <style>
         body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1F1C3C, #928DAB);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #9b59b6; /* breathtaking purple */
+            color: #ffffff; /* white text for high contrast */
         }
         .container {
-            text-align: center;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .cta-button {
-            background: linear-gradient(135deg, #9B59B6, #8E44AD);
-            border: none;
+        button {
+            background-color: #3498db;
             color: white;
-            padding: 15px 30px;
-            text-transform: uppercase;
-            border-radius: 50px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 1.2em;
-            transition: background 0.3s ease;
+            font-size: 16px;
         }
-        .cta-button:hover {
-            background: linear-gradient(135deg, #8E44AD, #9B59B6);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .hero {
-            animation: fadeIn 2s;
+        button:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
-    <div class="container hero">
-        <h1>Welcome to Global Study</h1>
-        <p>Your journey to knowledge starts here.</p>
-        <button class="cta-button">Start Learning</button>
+    <div class="container" role="main">
+        <header>
+            <h1>Global Study</h1>
+            <p id="mission-statement" aria-label="Accessibility First mission statement">Our mission is to make education accessible and inclusive for all students and teachers.</p>
+        </header>
+        <main>
+            <section>
+                <h2>Features</h2>
+                <ul>
+                    <li aria-label="Voice-to-Text for students">Voice-to-Text for students</li>
+                    <li aria-label="AI-assisted lesson planning for teachers">AI-assisted lesson planning for teachers</li>
+                    <li aria-label="Screen Reader Friendly UI">Screen Reader Friendly UI</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <button aria-label="Start your inclusive journey">Start Your Inclusive Journey</button>
+        </footer>
     </div>
 </body>
 </html>
